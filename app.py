@@ -12,7 +12,7 @@ def getGrammarCorrections(text_input):
     return resultText['result']
 
 
-@app.route('checkGrammar', methods=["POST"])
+@app.route('/checkGrammar', methods=["POST"])
 def checkGrammar():
     input_json = request.get_json(force=True)
     dictToReturn = {'text': getGrammarCorrections(input_json['text'])}
